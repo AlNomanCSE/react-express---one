@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import cars from "../carsData";
 const Cars = () => {
   return (
-    <section className="px-8 flex flex-wrap justify-around">
+    <section
+      className="p-8 flex flex-wrap justify-around"
+      style={{ minHeight: "calc(100vh - 116px)" }}
+    >
       {cars.map((car, index) => (
         <div key={index} className="flex flex-col gap-4 m-4">
           <img
