@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import cars from "../carsData";
 const Cardetails = () => {
   const { id } = useParams();
@@ -7,6 +7,7 @@ const Cardetails = () => {
 
   return (
     <section className="flex items-center justify-center h-screen">
+      <Link to="..">Back</Link>
       <div className="flex flex-col gap-4 m-4 w-[500px]">
         <img
           src={Car.imageUrl}

@@ -1,14 +1,10 @@
 const express = require("express");
+const userModel = require("./models/user");
+const indexRouter = require("./routes/index");
 const app = express();
 
-app.use((req, res, next) => {
-  next();
-});
-app.get("/", (req, res) => {
-  res.json(`Hello youu world !!! ${req.params.username}`);
-});
-
-//default error handler
+app.use("/", indexRouter);
+app.use("/users", userModel);
 
 app.listen(3000, () => {
   console.log("server is Runnig on ... 3000");

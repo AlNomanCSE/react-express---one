@@ -6,6 +6,7 @@ const Cars = () => {
       className="p-8 flex flex-wrap justify-around"
       style={{ minHeight: "calc(100vh - 116px)" }}
     >
+      <Link to=".." relative="path">Back</Link>
       {cars.map((car, index) => (
         <div key={index} className="flex flex-col gap-4 m-4">
           <img
